@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #cbe4de;
+  background-color: #000;
+}
+
+header {
+  background-color: #121212;
+  color: #cbe4de;
+  padding: 10px;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #cbe4de;
+}
+
+h1.Britz {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.dark-section, .light-section {
+  padding: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+.dark-section {
+  background-color: #111;
+  color: white;
+}
+
+.light-section {
+  background-color: #f8f8f8;
+  color: #222;
+  
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.img-box img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  text-align: center;
+  margin-left: 20px;
+}
+
+.black-han-sans-regular {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 150;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
