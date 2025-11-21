@@ -84,3 +84,47 @@ h1.Britz {
   .movie-cards .card:hover .content {
     opacity: 1;
   }
+
+  /* style.css 맨 아래에 추가하세요 */
+
+/* [BOM] Top 버튼 스타일 */
+#top-btn {
+    display: none; /* 평소에는 숨김 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #cbe4de; /* 사용자님 테마 색상 (하늘색) */
+    color: #121212; /* 글자색 (검정) */
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* 네온 효과 살짝 */
+    transition: 0.3s;
+}
+
+#top-btn:hover {
+    background-color: #fff; /* 마우스 올리면 흰색으로 */
+    transform: scale(1.1); /* 살짝 커짐 */
+}
+
+/* [DOM] 자바스크립트로 추가될 텍스트 스타일 */
+.js-title {
+    color: #121212;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 25%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.js-desc {
+    color: #333;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 600;
+}

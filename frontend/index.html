@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JohnWick series</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .auth-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0.9rem;
+        }
+        .auth-links a {
+            color: #cbe4de; /* 테마 색상 */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 1px solid #cbe4de;
+            border-radius: 5px;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+        .auth-links a:hover {
+            background-color: #cbe4de;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="Britz">
+            JohnWick Series
+        </h1>
+        
+        <div class="auth-links">
+            <a href="signup.html">MEMBERSHIP (Sign Up)</a>
+            <a href="login.html">LOGIN</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="movie-cards">
+            <a href="johnwick1.html" class="card">
+                <img src="image/johnwick.jpg" alt="johnwick" />
+                <div class="content"></div>
+              </a>
+               <a href="johnwick2.html" class="card">
+                <img src="image/johnwick2.jpg" alt="johnwick2" />
+               <div class="content"></div>
+             </a>
+              <a href="johnwick3.html" class="card">
+                <img src="image/johnwick3.jpg" alt="johnwick3" />
+                <div class="content"></div>
+             </a>
+              <a href="johnwick4.html" class="card">
+                <img src="image/johnwick4.jpg" alt="johnwick4" />
+                <div class="content"></div>
+              </a>
+          </div>
+        </div>
+    </main>
+
+    <div style="text-align: center; margin-top: 50px; color: #777;">
+        <p style="font-size: 0.8em;">※ 일부 코드 구조는 [W3C]를 참고하였습니다.</p>
+        <p style="font-size: 0.8em;">※ 일부 코드 구조는 [devRasen youtube]를 참고하였습니다.</p>
+        <p style="font-size: 0.8em;">※ 일부 이미지는 [존윅 시리즈 나무위키]를 참고하였습니다.</p>
+    </div>
+
+    <button id="top-btn" title="Go to top">⬆ TOP</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

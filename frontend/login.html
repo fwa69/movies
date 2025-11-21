@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* signup.html과 동일한 스타일 사용 */
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .auth-container {
+            background-color: #1e1e1e; padding: 40px; border-radius: 10px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); text-align: center;
+            width: 100%; max-width: 400px; border: 1px solid #333;
+        }
+        .auth-container h1 { color: #cbe4de; margin-bottom: 30px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; }
+        .input-group { margin-bottom: 20px; text-align: left; }
+        .input-group label { display: block; color: #888; margin-bottom: 5px; font-size: 0.9rem; }
+        .input-group input {
+            width: 100%; padding: 10px; border: 1px solid #444;
+            background-color: #121212; color: #fff; border-radius: 5px; outline: none;
+        }
+        .input-group input:focus { border-color: #cbe4de; }
+        .btn-gold {
+            width: 100%; padding: 12px; background-color: #cbe4de; color: #121212;
+            border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s;
+        }
+        .btn-gold:hover { background-color: #fff; }
+        .links { margin-top: 20px; font-size: 0.8rem; }
+        .links a { color: #888; text-decoration: none; }
+        .links a:hover { color: #cbe4de; }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>WELCOME TO CONTINENTAL</h1>
+        <div class="input-group">
+            <label>CONTACT (Email)</label>
+            <input type="email" id="login-email" placeholder="Enter your email">
+        </div>
+        <div class="input-group">
+            <label>PASSPHRASE (Password)</label>
+            <input type="password" id="login-password" placeholder="Enter your password">
+        </div>
+        <button class="btn-gold" onclick="login()">ACCESS SYSTEM</button>
+        
+        <div class="links">
+            <a href="signup.html">Need an account? Register</a> | 
+            <a href="index.html">Back to Main</a>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
