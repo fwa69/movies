@@ -34,5 +34,5 @@ app.get('/', (req, res) => {
 // 5. 서버 실행
 app.listen(PORT, () => {
   console.log(`✅ 서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
-  console.log(`🌐 외부 접속 주소: http://j-assignment-web.linkpc.net (공유기 설정 필요)`);
+  console.log(`🌐 외부 접속 주소: http://johnwick-portfolio.co.kr (공유기 설정 필요)`);
 });

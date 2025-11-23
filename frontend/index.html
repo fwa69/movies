@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JohnWick series</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
+        /* [기존 스타일] Auth Links */
         .auth-links {
             position: absolute;
             top: 20px;
@@ -14,7 +15,7 @@
             font-size: 0.9rem;
         }
         .auth-links a {
-            color: #cbe4de; /* 테마 색상 */
+            color: #cbe4de;
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
@@ -27,14 +28,42 @@
             background-color: #cbe4de;
             color: #121212;
         }
+
+        /* [⭐ 필수 추가 부분 ⭐] Cinematic Video Overlay */
+        #cinematic-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* JS로 1로 만듭니다 */
+            pointer-events: none;
+        }
+        #cinematic-overlay.active {
+            opacity: 1;
+            pointer-events: all; /* 활성화되면 클릭 방지 해제 */
+        }
+        #video-wrapper {
+            width: 90%;
+            max-width: 1280px; /* 영상 최대 너비 */
+            aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+            background: #111;
+        }
+        #video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1 class="Britz">
-            JohnWick Series
-        </h1>
-        
+        <h1 class="Britz">JohnWick Series</h1>
+
         <div class="auth-links">
             <a href="signup.html">MEMBERSHIP (Sign Up)</a>
             <a href="login.html">LOGIN</a>
@@ -44,23 +73,28 @@
     <main>
         <div class="container">
             <div class="movie-cards">
-            <a href="johnwick1.html" class="card">
-                <img src="image/johnwick.jpg" alt="johnwick" />
-                <div class="content"></div>
-              </a>
-               <a href="johnwick2.html" class="card">
-                <img src="image/johnwick2.jpg" alt="johnwick2" />
-               <div class="content"></div>
-             </a>
-              <a href="johnwick3.html" class="card">
-                <img src="image/johnwick3.jpg" alt="johnwick3" />
-                <div class="content"></div>
-             </a>
-              <a href="johnwick4.html" class="card">
-                <img src="image/johnwick4.jpg" alt="johnwick4" />
-                <div class="content"></div>
-              </a>
-          </div>
+
+                <a href="johnwick1.html" class="card">
+                    <img src="image/johnwick.jpg" alt="johnwick" />
+                    <div class="content"></div>
+                </a>
+
+                <a href="johnwick2.html" class="card">
+                    <img src="image/johnwick2.jpg" alt="johnwick2" />
+                    <div class="content"></div>
+                </a>
+
+                <a href="johnwick3.html" class="card">
+                    <img src="image/johnwick3.jpg" alt="johnwick3" />
+                    <div class="content"></div>
+                </a>
+
+                <a href="johnwick4.html" class="card">
+                    <img src="image/johnwick4.jpg" alt="johnwick4" />
+                    <div class="content"></div>
+                </a>
+
+            </div>
         </div>
     </main>
 
@@ -68,11 +102,12 @@
         <p style="font-size: 0.8em;">※ 일부 코드 구조는 [W3C]를 참고하였습니다.</p>
         <p style="font-size: 0.8em;">※ 일부 코드 구조는 [devRasen youtube]를 참고하였습니다.</p>
         <p style="font-size: 0.8em;">※ 일부 이미지는 [존윅 시리즈 나무위키]를 참고하였습니다.</p>
+        <p style="font-size: 0.8em;">※ 일부 gif는 https://www.tumblr.com/johnswick/785255675110588416/keanu-reeves-as-john-wick-in-john-wick-2014 참조했습니다.</p>
+        <p style="font-size: 0.8em;">※ 일부 gif는 https://www.tumblr.com/johnswick/783755066296434688/timestamp-roulette-john-wick-chapter-4 참조했습니다.</p>
     </div>
 
     <button id="top-btn" title="Go to top">⬆ TOP</button>
 
     <script src="script.js"></script>
-
 </body>
 </html>
