@@ -6,10 +6,10 @@ const subtitles = ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4"];
 // ⭐ [수정] 데이터 경로를 GIF 파일로 일관되게 변경
 const movieData = [
     // GIF 파일명과 이미지 경로 매칭 (GIF 파일명은 video/ 폴더에 있어야 합니다)
-    { id: 1, title: "Chapter 1 (2014)", transitionMedia: "video/johnwick1.gif" },
-    { id: 2, title: "Chapter 2 (2017)", transitionMedia: "video/johnwick2.gif" },
-    { id: 3, title: "Chapter 3 (2019)", transitionMedia: "video/johnwick3.gif" },
-    { id: 4, title: "Chapter 4 (2023)",transitionMedia: "video/johnwick4.gif" }
+    { id: 1, title: "Chapter 1 (2014)", image: "image/johnwick.jpg", transitionMedia: "video/johnwick1.gif" },
+    { id: 2, title: "Chapter 2 (2017)", image: "image/johnwick2.jpg", transitionMedia: "video/johnwick2.gif" },
+    { id: 3, title: "Chapter 3 (2019)", image: "image/johnwick3.jpg", transitionMedia: "video/johnwick3.gif" },
+    { id: 4, title: "Chapter 4 (2023)", image: "image/johnwick4.jpg", transitionMedia: "video/johnwick4.gif" }
 ];
 
 const contentDivs = document.querySelectorAll('.content');
@@ -60,7 +60,7 @@ function startCinematicTransition(targetUrl, title, index) {
     const mediaPath = movie.transitionMedia; // GIF 경로 사용
     
     // GIF는 onended 이벤트가 없으므로 고정된 4초 후 이동
-    let redirectTime = 2500; 
+    let redirectTime = 4000; 
     let contentHTML = ``;
 
     // ⭐ [수정] 모든 카드에 대해 GIF 경로가 있는지 확인합니다.
@@ -119,6 +119,8 @@ cards.forEach((card, index) => {
         headerElement.style.backgroundPosition = 'center';
         headerElement.style.transition = 'background-image 0.5s ease-in-out';
         headerElement.style.textShadow = '2px 2px 5px #000';
+        
+        titleElement.innerText = movieData[index].title + " - PREVIEW";
     });
 
     card.addEventListener('mouseleave', () => {
