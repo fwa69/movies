@@ -6,7 +6,7 @@ import mysql from 'mysql2/promise';
 const pool = mysql.createPool({
   host: 'localhost',        // 내 컴퓨터
   user: 'root',             // MySQL 아이디 (기본값 root)
-  password: 'pepsi1@2', // ★ 중요: 설치할 때 정한 비밀번호로 바꾸세요!
+  password: '', // ★ 중요: 설치할 때 정한 비밀번호로 바꾸세요!
   database: 'johnwick_db',  // 아까 만든 데이터베이스 이름
   waitForConnections: true,
   connectionLimit: 10,
