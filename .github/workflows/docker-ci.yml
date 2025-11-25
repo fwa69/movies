@@ -32,7 +32,10 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: . # C:\movies (루트)를 컨텍스트로 사용
+          # [★ 수정 1] 빌드 기준 폴더를 backend로 명확히 지정
+          context: ./backend 
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/johnwick-backend:${{ steps.meta.outputs.TAG }}, ${{ secrets.DOCKER_USERNAME }}/johnwick-backend:latest
-          file: ./backend/Dockerfile # Dockerfile 경로 지정
+          
+          # [★ 수정 2] Dockerfile이 컨텍스트 안에 있으므로 파일명을 Dockerfile로만 지정
+          file: Dockerfile
