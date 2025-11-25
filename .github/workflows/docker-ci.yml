@@ -28,14 +28,15 @@ jobs:
         id: meta
         run: echo "TAG=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
         
-      # [핵심] Docker 이미지 빌드 및 Push
+     # .github/workflows/docker-ci.yml (Build and Push Docker Image 스텝)
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          # [★ 수정 1] 빌드 기준 폴더를 backend로 명확히 지정
-          context: ./backend 
+          # [★ FIX 1] 빌드 컨텍스트를 저장소의 루트(.)로 설정
+          context: . 
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/johnwick-backend:${{ steps.meta.outputs.TAG }}, ${{ secrets.DOCKER_USERNAME }}/johnwick-backend:latest
           
-          # [★ 수정 2] Dockerfile이 컨텍스트 안에 있으므로 파일명을 Dockerfile로만 지정
-          file: Dockerfile
+          # [★ FIX 2] Dockerfile의 경로를 루트에서부터 명확히 지정
+          file: ./backend/Dockerfile
